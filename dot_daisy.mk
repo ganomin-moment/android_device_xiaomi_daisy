@@ -31,22 +31,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common Xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
-
-# Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Maintainer
-XTENDED_MAINTAINER := 🔥TogoFire🔥
+# Inherit some common dotOS stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := xtended_daisy
+PRODUCT_NAME := dot_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
 PRODUCT_MANUFACTURER := Xiaomi
+TARGET_VENDOR := Xiaomi
+
+# Inherit some extra dotOS stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SCREEN_DENSITY := 420
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
 TARGET_VENDOR := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
