@@ -569,5 +569,5 @@ PRODUCT_PACKAGES += \
     CustomDoze
 
 # XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
+#PRODUCT_PACKAGES += \
+#    XiaomiParts
