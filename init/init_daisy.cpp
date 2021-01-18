@@ -56,3 +56,8 @@ void check_device()
         heapminfree = "2m";
    }
 }
+
+void vendor_load_properties()
+{
+
+}
