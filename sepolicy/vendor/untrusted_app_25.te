@@ -11,6 +11,8 @@ allow untrusted_app_25 property_socket:sock_file { write };
 allow untrusted_app_25 init:unix_stream_socket { connectto };
 allow untrusted_app_25 default_prop:property_service { set };
 allow untrusted_app_25 proc_vmstat:file { open read getattr };
+#allow untrusted_app_25 vendor_persist_camera_prop:file { open read getattr };
+allow untrusted_app_25 persist_camera_prop:file { open read getattr };
 allow untrusted_app_25 proc_qtaguid_stat:file { read };
 allow untrusted_app_25 radio_data_file:dir { getattr };
 allow untrusted_app_25 serialno_prop:file { read open getattr };
@@ -18,7 +20,8 @@ allow untrusted_app_25 rootfs:dir { open read getattr };
 allow untrusted_app_25 adsprpc_prop:file { open read getattr };
 allow untrusted_app_25 apexd_prop:file { open read getattr };
 allow untrusted_app_25 vendor_system_prop:file { read open getattr };
-allow untrusted_app_25 anr_data_file:dir { open read getattr };
+#$hit
+#allow untrusted_app_25 anr_data_file:dir { open read getattr };
 allow untrusted_app_25 sysfs:file { open read getattr };
 allow untrusted_app_25 system_file:file { lock };
 allow untrusted_app_25 vendor_file:file { open read getattr };
